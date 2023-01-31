@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+}
+
+.header__container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0;
+}
+
+.header-nav {
+    width: 100%;
+    max-width: 660px;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        max-height: 41px;
+        margin-right: 115px;
+    }
+
+    &__list {
+        list-style-type: none;
+    
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $white-color;
+    }
+    
+}
+
+.header__buttons-container {
+    display: flex;
+    gap: 16px;
+
+    .btn{
+        font-size: 0.875rem;
+        width: 115px;
+        height: 41px;
+    }
+}
