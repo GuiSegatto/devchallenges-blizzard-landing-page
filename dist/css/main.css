@@ -2,16 +2,62 @@
 .header {
   width: 100%;
 }
+.header__background {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  position: fixed;
+  z-index: -1;
+  max-height: 736px;
+  min-width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header__menu-divider {
+  background-color: #ffffff;
+  height: 1.5px;
+  border: 0;
+  opacity: 10%;
+}
+.header__menu-divider-detail {
+  background-color: #00AEFF;
+  height: 1.5px;
+  border: 0;
+  margin-bottom: -1.5px;
+  max-width: 43px;
+}
+.header__bottom-divider {
+  background-color: #00AEFF;
+  height: 3px;
+  border: 0;
+  max-width: 560px;
+  position: absolute;
+  top: 733px;
+  left: 0;
+  right: 0;
+}
 
 .header__container {
   max-width: 1320px;
   margin: 0 auto;
 }
 
-.header__menu {
+.header-menu {
   display: flex;
   justify-content: space-between;
   margin: 28px 0;
+}
+.header-menu__buttons-container {
+  display: flex;
+  gap: 16px;
+}
+.header-menu__buttons-container .btn {
+  font-size: 0.875rem;
+  width: 115px;
+  height: 41px;
 }
 
 .header-nav {
@@ -35,16 +81,6 @@
   color: #ffffff;
 }
 
-.header__buttons-container {
-  display: flex;
-  gap: 16px;
-}
-.header__buttons-container .btn {
-  font-size: 0.875rem;
-  width: 115px;
-  height: 41px;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -66,6 +102,7 @@ body {
   font-size: 1em;
   border: 0;
   color: #ffffff;
+  cursor: pointer;
 }
 .btn--primary {
   background: #00AEFF;
