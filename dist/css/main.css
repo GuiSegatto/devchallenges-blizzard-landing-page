@@ -81,6 +81,49 @@
   color: #ffffff;
 }
 
+.banner-hero {
+  min-height: 634px;
+  display: flex;
+  align-items: center;
+}
+.banner-hero .btn {
+  padding: 14px 32px;
+  width: 168px;
+  height: 52px;
+  margin-top: 16px;
+}
+
+.game-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.game-slider__input {
+  display: none;
+}
+.game-slider__input:checked + .game-slider__item {
+  mix-blend-mode: normal;
+}
+.game-slider__item {
+  cursor: pointer;
+  mix-blend-mode: luminosity;
+}
+
+.banner-hero__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 562px;
+}
+
+.banner-hero__game-header {
+  font-size: 64px;
+}
+
+.banner-hero__game-paragraph {
+  font-size: 18px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

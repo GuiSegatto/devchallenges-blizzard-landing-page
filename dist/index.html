@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <!-- JavaScript -->
     <script defer src="script.js"></script>
 </head>
+
 <body>
 
     <header class="header">
@@ -33,11 +35,45 @@
                 </div>
             </div>
             <hr class="header__menu-divider-detail">
+            <hr class="header__menu-divider">
+            <div class="banner-hero">
+                <div class="game-slider">
+                    <input class="game-slider__input" type="radio" id="diabloIV" name="header-slider" value="diabloIV"
+                        checked>
+                    <label class="game-slider__item" for="diabloIV"><img src="../assets/header/icons/diablo-iv-icon.svg"
+                            alt=""></label>
+
+                    <input class="game-slider__input" type="radio" id="hearthstone" name="header-slider"
+                        value="hearthstone">
+                    <label class="game-slider__item" for="hearthstone"><img
+                            src="../assets/header/icons/hearthstone-icon.svg" alt=""></label>
+
+                    <input class="game-slider__input" type="radio" id="wow" name="header-slider" value="wow">
+                    <label class="game-slider__item" for="wow"><img src="../assets/header/icons/wow-icon.svg"
+                            alt=""></label>
+
+                    <input class="game-slider__input" type="radio" id="diabloI" name="header-slider" value="diabloI">
+                    <label class="game-slider__item" for="diabloI"><img
+                            src="../assets/header/icons/starcraft-ii-icon.svg" alt=""></label>
+
+                    <input class="game-slider__input" type="radio" id="starcraftII" name="header-slider"
+                        value="starcraftII">
+                    <label class="game-slider__item" for="starcraftII"><img
+                            src="../assets/header/icons/diablo-i-icon.svg" alt=""></label>
+
+                </div>
+                <div class="banner-hero__text-wrapper">
+                    <h2 class="banner-hero__game-header" id="selectedGameHeaderText">Retorne à escuridão com o game Diablo IV</h2>
+                    <p class="banner-hero__game-paragraph" id="selectedGameParagraph">O retorno de Lilith traz uma era de escuridão e sofrimento</p>
+                    <button class="btn btn--primary">Jogue Agora</button>
+                </div>
+            </div>
         </div>
-        <hr class="header__menu-divider">
+
         <img alt="Plano de Fundo" class="header__background" src="../assets/header/diablo-background.jpg">
         <hr class="header__bottom-divider">
     </header>
-    
+
 </body>
+
 </html>
