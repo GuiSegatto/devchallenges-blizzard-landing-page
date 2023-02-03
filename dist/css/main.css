@@ -97,6 +97,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-right: 183px;
 }
 .game-slider__input {
   display: none;
@@ -122,6 +123,25 @@
 
 .banner-hero__game-paragraph {
   font-size: 18px;
+}
+
+.banner-hero_game-images {
+  display: flex;
+  flex-direction: column;
+  gap: 112px;
+  position: relative;
+  left: 19%;
+}
+
+.banner-hero_trailer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+.banner-hero_trailer-wrapper .banner-hero_watch-trailer {
+  font-size: 13px;
+  font-weight: 600;
 }
 
 * {
