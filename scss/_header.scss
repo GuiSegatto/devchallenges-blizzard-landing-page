@@ -97,7 +97,7 @@
 
     .btn {
         padding: 14px 32px;
-        width: 168px;
+        width: fit-content;
         height: 52px;
         margin-top: 16px;
     }
@@ -134,13 +134,14 @@
 
 .banner-hero__game-header {
     font-size: 64px;
+    width: 39.125rem;
 }
 
 .banner-hero__game-paragraph{
     font-size: 18px;
 }
 
-.banner-hero_game-images {
+.banner-hero__game-images {
     display: flex;
     flex-direction: column;
     gap: 112px;
@@ -148,14 +149,34 @@
     left: 19%;
 }
 
-.banner-hero_trailer-wrapper {
+.banner-hero__trailer-wrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: flex-end;
 
-    .banner-hero_watch-trailer {
+    .banner-hero__watch-trailer {
         font-size: 13px;
         font-weight: 600;
     }
 }
+
+
+.banner-hero_trailer-gif {
+    width: 280px;
+    height: 158px;
+    display: none;
+}
+
+.banner-hero_trailer-cover {
+    width: 280px;
+    height: 158px;
+}
+
+/* .banner-hero__trailer-container:hover > .banner-hero_trailer-gif {
+    display: block;
+}
+.banner-hero__trailer-container:hover > .banner-hero_trailer-cover {
+    display: none;
+}
+ */

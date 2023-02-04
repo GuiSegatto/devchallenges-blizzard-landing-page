@@ -53,11 +53,12 @@
                     <label class="game-slider__item" for="wow"><img src="../assets/header/icons/wow-icon.svg"
                             alt=""></label>
 
-                    <input class="game-slider__input" type="radio" id="diabloI" name="header-slider" value="diabloI">
+                    <input class="game-slider__input" disabled type="radio" id="diabloI" name="header-slider"
+                        value="diabloI">
                     <label class="game-slider__item" for="diabloI"><img
                             src="../assets/header/icons/starcraft-ii-icon.svg" alt=""></label>
 
-                    <input class="game-slider__input" type="radio" id="starcraftII" name="header-slider"
+                    <input class="game-slider__input" disabled type="radio" id="starcraftII" name="header-slider"
                         value="starcraftII">
                     <label class="game-slider__item" for="starcraftII"><img
                             src="../assets/header/icons/diablo-i-icon.svg" alt=""></label>
@@ -68,13 +69,18 @@
                         Diablo IV</h2>
                     <p class="banner-hero__game-paragraph" id="selectedGameParagraph">O retorno de Lilith traz uma era
                         de escuridão e sofrimento</p>
-                    <button class="btn btn--primary">Jogue Agora</button>
+                    <button class="btn btn--primary" id="selectGameButtonText">Jogue Agora</button>
                 </div>
-                <div class="banner-hero_game-images">
+                <div class="banner-hero__game-images">
                     <img src="../assets/header/diabloiv-logo.png" alt="" class="banner-hero__game-logo">
-                    <div class="banner-hero_trailer-wrapper">
-                        <p class="banner-hero_watch-trailer">ASSISTA O TRAILER</p>
-                        <img src="../assets/header/diabloiv-trailer-cover.png" alt="" class="banner-hero_trailer-cover">
+                    <div class="banner-hero__trailer-wrapper">
+                        <p class="banner-hero__watch-trailer">ASSISTA O TRAILER</p>
+                        <div class="banner-hero__trailer-container">
+                            <img src="../assets/header/diabloiv-trailer-cover.png" alt=""
+                               id="selectedGameTrailerCover" class="banner-hero_trailer-cover">
+                            <!-- <img src="../assets/header/diabloiv-trailer-animated.gif" alt=""
+                               id="selectedGameTrailerAnimated" class="banner-hero_trailer-gif"> -->
+                        </div>
                     </div>
                 </div>
             </div>
