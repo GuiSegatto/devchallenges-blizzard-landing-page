@@ -4,17 +4,17 @@ bannerHeroGameSlider.forEach(item => item.addEventListener('change', changeBanne
 
 
 function changeBannerHeroInfo () {
-    let selectedGame = this.id
-    setBannerHeroImages(selectedGame)
-    setBannerHeroText(selectedGame)
-
-    setTrailerImages(selectedGame)
+    let selectedGame = this.id;
+    setBannerHeroImages(selectedGame);
+    setBannerHeroText(selectedGame);
 }
+
+const trailerCover = document.querySelector('#selectedGameTrailerCover');
 
 function setBannerHeroImages (game) {
     const background = document.querySelector('.header__background');
     const gameLogo = document.querySelector('.banner-hero__game-logo');
-    const trailerCover = document.querySelector('#selectedGameTrailerCover');
+    
     //const trailerAnimated = document.querySelector('#selectedGameTrailerAnimated');;
     const trailerWrapper = document.querySelector('.banner-hero__trailer-wrapper');
 
@@ -23,19 +23,29 @@ function setBannerHeroImages (game) {
     trailerCover.src = `../assets/header/${game}-trailer-cover.png`;
     //trailerAnimated.src = `../assets/header/${game}-trailer-animated.gif`;
     
-
-    trailerWrapper.addEventListener('mouseover', () => {
-        trailerCover.src = `../assets/header/${game}-trailer-animated.gif`;
-        console.log('entrei')
-    });
-
-    trailerWrapper.addEventListener('mouseout', () => {
-        trailerCover.src = `../assets/header/${game}-trailer-cover.png`;
-        console.log('sai')
-        trailerWrapper.removeEventListener('mouseover')
-    });
+    destroyMouseListeners(trailerWrapper, animateTrailer, setTrailerCover);
+    trailerWrapper.addEventListener('mouseover', animateTrailer);
+    trailerWrapper.addEventListener('mouseout', setTrailerCover);
     
-};
+}
+
+const setTrailerCover = () => {
+    trailerCover.src = `../assets/header/wow-trailer-cover.png`;
+    console.log('sai');
+}
+
+const animateTrailer = () => {
+    trailerCover.src = `../assets/header/wow-trailer-animated.gif`;
+    console.log('entrei');
+}
+
+function destroyMouseListeners (element, mouseOverHandler, mouseOutHandler) {
+    element.removeEventListener('mouseover', mouseOverHandler);
+    element.removeEventListener('mouseout', mouseOutHandler);
+}
+
+
+
 
 function setBannerHeroText (game) {
     const PLAY_NOW = 'Jogue Agora';
@@ -64,4 +74,4 @@ function setBannerHeroText (game) {
     headerText.textContent = gameInfo[game].header
     paragraphText.textContent = gameInfo[game].paragraph
     buttonText.textContent = gameInfo[game].button
-};
+}

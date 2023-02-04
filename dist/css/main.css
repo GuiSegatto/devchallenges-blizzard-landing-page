@@ -85,6 +85,7 @@
   min-height: 634px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .banner-hero .btn {
   padding: 14px 32px;
@@ -132,8 +133,8 @@
   display: flex;
   flex-direction: column;
   gap: 112px;
-  position: relative;
-  left: 19%;
+  position: absolute;
+  right: 0;
 }
 
 .banner-hero__trailer-wrapper {
