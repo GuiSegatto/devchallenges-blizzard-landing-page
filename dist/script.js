@@ -1,53 +1,17 @@
 const bannerHeroGameSlider = document.querySelectorAll('input[name="header-slider"]');
+const trailerCover = document.querySelector('#selectedGameTrailerCover');
+let selectedGame = 'diabloIV'
 
 bannerHeroGameSlider.forEach(item => item.addEventListener('change', changeBannerHeroInfo));
 
 
-function changeBannerHeroInfo () {
-    let selectedGame = this.id;
+function changeBannerHeroInfo() {
+    selectedGame = this.id;
     setBannerHeroImages(selectedGame);
     setBannerHeroText(selectedGame);
 }
 
-const trailerCover = document.querySelector('#selectedGameTrailerCover');
-
-function setBannerHeroImages (game) {
-    const background = document.querySelector('.header__background');
-    const gameLogo = document.querySelector('.banner-hero__game-logo');
-    
-    //const trailerAnimated = document.querySelector('#selectedGameTrailerAnimated');;
-    const trailerWrapper = document.querySelector('.banner-hero__trailer-wrapper');
-
-    background.src = `../assets/header/${game}-background.jpg`;
-    gameLogo.src = `../assets/header/${game}-logo.png`;
-    trailerCover.src = `../assets/header/${game}-trailer-cover.png`;
-    //trailerAnimated.src = `../assets/header/${game}-trailer-animated.gif`;
-    
-    destroyMouseListeners(trailerWrapper, animateTrailer, setTrailerCover);
-    trailerWrapper.addEventListener('mouseover', animateTrailer);
-    trailerWrapper.addEventListener('mouseout', setTrailerCover);
-    
-}
-
-const setTrailerCover = () => {
-    trailerCover.src = `../assets/header/wow-trailer-cover.png`;
-    console.log('sai');
-}
-
-const animateTrailer = () => {
-    trailerCover.src = `../assets/header/wow-trailer-animated.gif`;
-    console.log('entrei');
-}
-
-function destroyMouseListeners (element, mouseOverHandler, mouseOutHandler) {
-    element.removeEventListener('mouseover', mouseOverHandler);
-    element.removeEventListener('mouseout', mouseOutHandler);
-}
-
-
-
-
-function setBannerHeroText (game) {
+function setBannerHeroText(game) {
     const PLAY_NOW = 'Jogue Agora';
     const PRE_ORDER = 'Reserve agora na pré-venda';
     const gameInfo = {
@@ -75,3 +39,33 @@ function setBannerHeroText (game) {
     paragraphText.textContent = gameInfo[game].paragraph
     buttonText.textContent = gameInfo[game].button
 }
+
+function setBannerHeroImages(game) {
+    const background = document.querySelector('.header__background');
+    const gameLogo = document.querySelector('.banner-hero__game-logo');
+
+    background.src = `../assets/header/${game}-background.jpg`;
+    gameLogo.src = `../assets/header/${game}-logo.png`;
+    trailerCover.src = `../assets/header/${game}-trailer-cover.png`;
+
+
+    destroyMouseListeners(trailerCover, animateTrailer, setTrailerCover);
+    trailerCover.addEventListener('mouseover', animateTrailer);
+    trailerCover.addEventListener('mouseout', setTrailerCover);
+}
+
+function destroyMouseListeners(element, mouseOverHandler, mouseOutHandler) {
+    element.removeEventListener('mouseover', mouseOverHandler);
+    element.removeEventListener('mouseout', mouseOutHandler);
+}
+
+const setTrailerCover = () => {
+    trailerCover.src = `../assets/header/${selectedGame}-trailer-cover.png`;
+}
+
+const animateTrailer = () => {
+    trailerCover.src = `../assets/header/${selectedGame}-trailer-animated.gif`;
+}
+
+setBannerHeroImages(selectedGame);
+setBannerHeroText(selectedGame);

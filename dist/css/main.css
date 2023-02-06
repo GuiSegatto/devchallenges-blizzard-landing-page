@@ -108,6 +108,9 @@
 .game-slider__input:checked + .game-slider__item {
   mix-blend-mode: normal;
 }
+.game-slider__input:disabled + .game-slider__item {
+  cursor: default;
+}
 .game-slider__item {
   cursor: pointer;
   mix-blend-mode: luminosity;
@@ -137,6 +140,10 @@
   right: 0;
 }
 
+.banner-hero__logo-wrapper {
+  height: 205px;
+}
+
 .banner-hero__trailer-wrapper {
   display: flex;
   flex-direction: column;
@@ -148,10 +155,37 @@
   font-weight: 600;
 }
 
-.banner-hero_trailer-gif {
-  width: 280px;
-  height: 158px;
-  display: none;
+.banner-hero__trailer-container {
+  position: relative;
+  max-height: 158px;
+}
+.banner-hero__trailer-container::before {
+  content: "";
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTEiIHZpZXdCb3g9IjAgMCA1MSA1MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfYl8xXzMxOSkiPgo8Y2lyY2xlIGN4PSIyNS41IiBjeT0iMjUuNSIgcj0iMjUuNSIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzFfMzE5KSIvPgo8L2c+CjxwYXRoIGQ9Ik0zNC4yNTM3IDI1LjQ5OTlMMjAuNTUyMiAxNi43NDYyTDIwLjU1MjIgMzQuMjUzN0wzNC4yNTM3IDI1LjQ5OTlaIiBmaWxsPSIjMDBBRUZGIi8+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2JfMV8zMTkiIHg9Ii0zIiB5PSItMyIgd2lkdGg9IjU3IiBoZWlnaHQ9IjU3IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUdhdXNzaWFuQmx1ciBpbj0iQmFja2dyb3VuZEltYWdlRml4IiBzdGREZXZpYXRpb249IjEuNSIvPgo8ZmVDb21wb3NpdGUgaW4yPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImluIiByZXN1bHQ9ImVmZmVjdDFfYmFja2dyb3VuZEJsdXJfMV8zMTkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2JhY2tncm91bmRCbHVyXzFfMzE5IiByZXN1bHQ9InNoYXBlIi8+CjwvZmlsdGVyPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMV8zMTkiIHgxPSIzMC44NjUyIiB5MT0iLTEwLjAzMTgiIHgyPSI1OS4yMjAyIiB5Mj0iMjAuMDgxNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMDcwNzBBIiBzdG9wLW9wYWNpdHk9IjAuODYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEYxMDE2IiBzdG9wLW9wYWNpdHk9IjAuNSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=);
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+.banner-hero__trailer-container:hover::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEiIGhlaWdodD0iNjEiIHZpZXdCb3g9IjAgMCA2MSA2MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfYl8xXzM4OCkiPgo8Y2lyY2xlIGN4PSIzMC41IiBjeT0iMzAuNSIgcj0iMjUuNSIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzFfMzg4KSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPGNpcmNsZSBjeD0iMzAuNSIgY3k9IjMwLjUiIHI9IjI4IiBzdHJva2U9IiMwMEFFRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjIiIHN0cm9rZS13aWR0aD0iNSIvPgo8L2c+CjxwYXRoIGQ9Ik0zOS4yNTM5IDMwLjUwMDJMMjUuNTUyNCAyMS43NDY0TDI1LjU1MjQgMzkuMjUzOUwzOS4yNTM5IDMwLjUwMDJaIiBmaWxsPSIjMDIwMjAzIi8+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2JfMV8zODgiIHg9Ii0zIiB5PSItMyIgd2lkdGg9IjY3IiBoZWlnaHQ9IjY3IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUdhdXNzaWFuQmx1ciBpbj0iQmFja2dyb3VuZEltYWdlRml4IiBzdGREZXZpYXRpb249IjEuNSIvPgo8ZmVDb21wb3NpdGUgaW4yPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImluIiByZXN1bHQ9ImVmZmVjdDFfYmFja2dyb3VuZEJsdXJfMV8zODgiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2JhY2tncm91bmRCbHVyXzFfMzg4IiByZXN1bHQ9InNoYXBlIi8+CjwvZmlsdGVyPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMV8zODgiIHgxPSIzMC41IiB5MT0iNSIgeDI9IjQ2LjUiIHkyPSI1NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMDBBRUZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwQUVGRiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
+  background-size: contain;
+}
+.banner-hero__trailer-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(97.2% 94.3% at 50.89% 5.7%, rgba(2, 2, 3, 0) 0%, #020203 71.1%);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.2;
 }
 
 .banner-hero_trailer-cover {
@@ -159,13 +193,6 @@
   height: 158px;
 }
 
-/* .banner-hero__trailer-container:hover > .banner-hero_trailer-gif {
-    display: block;
-}
-.banner-hero__trailer-container:hover > .banner-hero_trailer-cover {
-    display: none;
-}
- */
 * {
   box-sizing: border-box;
   margin: 0;
