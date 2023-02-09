@@ -2,12 +2,16 @@
 .header {
   width: 100%;
 }
+.header__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
 .header__background {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  position: fixed;
+  position: absolute;
   z-index: -1;
   max-height: 736px;
   min-width: 100%;
@@ -38,11 +42,6 @@
   top: 733px;
   left: 0;
   right: 0;
-}
-
-.header__container {
-  max-width: 1320px;
-  margin: 0 auto;
 }
 
 .header-menu {
@@ -94,6 +93,7 @@
   width: fit-content;
   height: 52px;
   margin-top: 16px;
+  font-weight: 600;
 }
 
 .game-slider {
@@ -193,6 +193,74 @@
   height: 158px;
 }
 
+.footer {
+  width: 100%;
+  position: relative;
+}
+.footer__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.footer__background {
+  max-width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 132px;
+}
+.footer-info__logo {
+  width: 133px;
+}
+.footer-info__header {
+  font-size: 32px;
+  font-weight: 700;
+}
+.footer-info__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-info__item {
+  color: #828792;
+  font-size: 18px;
+  display: flex;
+  gap: 16px;
+}
+.footer-info__item-icon {
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+}
+.footer-info .btn {
+  width: 266px;
+  height: 52px;
+  font-weight: 600;
+}
+.footer-info__mobile-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-info__mobile-icon {
+  height: 20px;
+}
+.footer-info__mobile-paragraph {
+  max-width: 239px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.footer-info__mobile-paragraph a {
+  color: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -204,6 +272,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 

@@ -1,10 +1,15 @@
 .header {
     width: 100%;
 
+    &__container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
     &__background {
         object-fit: cover;
         object-position: top;
-        position: fixed;
+        position: absolute;
         z-index: -1;
         max-height: 736px;
         min-width: 100%;
@@ -42,10 +47,7 @@
     }
 }
 
-.header__container {
-    max-width: 1320px;
-    margin: 0 auto;
-}
+
 
 .header-menu {
     display: flex;
@@ -101,6 +103,7 @@
         width: fit-content;
         height: 52px;
         margin-top: 16px;
+        font-weight: 600;
     }
 
 }
