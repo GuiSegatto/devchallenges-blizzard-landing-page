@@ -88,7 +88,6 @@
 }
 .banner-hero .btn {
   padding: 14px 32px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 52px;
@@ -200,6 +199,7 @@
 .footer__container {
   max-width: 1320px;
   margin: 0 auto;
+  display: flex;
 }
 .footer__background {
   max-width: 100%;
@@ -214,6 +214,7 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 132px;
+  max-width: 400px;
 }
 .footer-info__logo {
   width: 133px;
@@ -240,9 +241,12 @@
   margin: auto 0;
 }
 .footer-info .btn {
-  width: 266px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 52px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 .footer-info__mobile-container {
   display: flex;
@@ -259,6 +263,43 @@
 }
 .footer-info__mobile-paragraph a {
   color: #ffffff;
+}
+.footer-info #OSLogo {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 0.625rem;
+}
+
+.footer-images {
+  position: relative;
+  left: 10%;
+  width: 50%;
+}
+.footer-images__background {
+  width: 1000px;
+}
+.footer-images__overlay {
+  width: 525px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  animation-duration: 2s;
+  animation-name: scale;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
 }
 
 * {
