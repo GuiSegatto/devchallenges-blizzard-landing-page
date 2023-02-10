@@ -5,6 +5,7 @@
     &__container {
         max-width: 1320px;
         margin: 0 auto;
+        display: flex;
     }
 
     &__background {
@@ -21,6 +22,8 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 132px;
+    max-width: 400px;
+
     &__logo {
         width: 133px;
     }
@@ -51,9 +54,11 @@
     }
 
     .btn {
-        width: 266px;
+        width: fit-content;
         height: 52px;
         font-weight: 600;
+        display: flex;
+        align-items: center;
     }
 
     &__mobile-container {
@@ -65,14 +70,55 @@
     &__mobile-icon{
         height: 20px;
     }
+
     &__mobile-paragraph {
         max-width: 239px;
         font-weight: 600;
         font-size: 14px;
-        
 
         a {
             color: $white-color;
+        }
+    }
+
+    #OSLogo {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.625rem;
+    }
+}
+
+.footer-images {
+    position: relative;
+    left: 10%;
+    width: 50%;
+
+    &__background{
+        width: 1000px;
+    }
+
+    &__overlay{
+        width: 525px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        animation-duration: 2s;
+        animation-name: scale;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes scale {
+        from {
+            transform: scale(1)
+        }
+
+        to {
+            transform: scale(1.15);
         }
     }
 }

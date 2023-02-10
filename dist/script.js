@@ -1,10 +1,10 @@
+/* VARIABLES */
 const bannerHeroGameSlider = document.querySelectorAll('input[name="header-slider"]');
 const trailerCover = document.querySelector('#selectedGameTrailerCover');
 let selectedGame = 'diabloIV'
 
+/* HEADER SCRIPTS */
 bannerHeroGameSlider.forEach(item => item.addEventListener('change', changeBannerHeroInfo));
-
-
 function changeBannerHeroInfo() {
     selectedGame = this.id;
     setBannerHeroImages(selectedGame);
@@ -69,3 +69,40 @@ const animateTrailer = () => {
 
 setBannerHeroImages(selectedGame);
 setBannerHeroText(selectedGame);
+
+/* FOOTER SCRIPTS */
+function getUserOS() {
+    let OS
+    if (navigator.userAgent.indexOf("Win") != -1) {
+        OS = "windows";
+    }
+    if (navigator.userAgent.indexOf("Mac") != -1) {
+        OS = "mac";
+    }
+    if (navigator.userAgent.indexOf("Linux") != -1) {
+        OS = "linux";
+    }
+    return OS
+}
+
+function updateDownloadButton() {
+    OS = getUserOS()
+    const logo = document.querySelector('#OSLogo')
+    const osName = document.querySelector('#OSName')
+    const downloadTo = "Baixar para o "
+
+    if (OS === "mac") {
+        logo.style.backgroundImage = `url(../assets/footer/os-mac-icon.svg)`
+        osName.textContent = downloadTo + 'MacOS'
+    }
+    else if (OS === "linux") {
+        logo.style.backgroundImage = `url(../assets/footer/os-linux-icon.svg)`
+        osName.textContent = downloadTo + 'Linux'
+    }
+    else {
+        logo.style.backgroundImage = `url(../assets/footer/os-windows-icon.svg)`
+        osName.textContent = downloadTo + 'Windows'
+    }
+}  
+
+updateDownloadButton()
