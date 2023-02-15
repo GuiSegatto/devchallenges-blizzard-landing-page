@@ -221,7 +221,7 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 132px;
-  max-width: 400px;
+  max-width: 30%;
 }
 .footer-info__logo {
   width: 133px;
@@ -284,13 +284,13 @@
 .footer-images {
   position: relative;
   left: 10%;
-  width: 50%;
+  max-width: 70%;
 }
 .footer-images__background {
-  width: 1000px;
+  width: 100%;
 }
 .footer-images__overlay {
-  width: 525px;
+  width: 50%;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -307,6 +307,78 @@
   to {
     transform: scale(1.15);
   }
+}
+
+.exclusive-games {
+  width: 100%;
+}
+.exclusive-games__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.games-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 85px 0;
+}
+.games-header__container {
+  display: flex;
+  gap: 159px;
+}
+.games-header__paragraph {
+  color: #8F9199;
+  font-weight: 600;
+}
+.games-header__header {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 32px;
+  max-width: 175px;
+}
+.games-header__icons-container {
+  display: flex;
+  gap: 24px;
+}
+.games-header__icon {
+  max-width: 20px;
+}
+.games-header__link {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  color: #00AEFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+.games-header__link img {
+  width: 9px;
+}
+
+.card__image-container {
+  position: relative;
+  width: 20%;
+}
+.card__image-container .card__game-background {
+  width: 100%;
+}
+.card__image-container .card__game-logo {
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  right: 50%;
+}
+.card__text-container {
+  color: #ffffff;
+  margin-top: 18px;
+}
+.card__text-container h3 {
+  font-weight: 600;
+  font-size: 19px;
+}
+.card__text-container p {
+  font-size: 15px;
+  opacity: 0.6;
 }
 
 * {

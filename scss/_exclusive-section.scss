@@ -1,0 +1,87 @@
+.exclusive-games{
+    width: 100%;
+
+    &__container{
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+}
+
+.games-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 85px 0;
+
+    &__container {
+        display: flex;
+        gap: 159px;
+    }
+
+    &__paragraph {
+        color: $light-grey-color;
+        font-weight: 600;
+    }
+
+    &__header {
+        color: $white-color;
+        font-weight: 700;
+        font-size: 32px;
+        max-width: 175px;
+    }
+
+    &__icons-container {
+        display: flex;
+        gap: 24px
+    }
+
+    &__icon {
+        max-width: 20px;
+    }
+
+    &__link{
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+
+        color: $light-blue-color;
+        text-decoration: none;
+        font-weight: 600;
+
+        & img {
+            width: 9px;
+        }
+    }
+}
+
+.card {
+    &__image-container {
+        position: relative;
+        width: 20%;
+
+        .card__game-background {
+            width: 100%;
+        }
+
+        .card__game-logo {
+            position: absolute;
+            top: 65%;
+            left: 20%;
+            right: 50%;
+        }
+    }
+
+    &__text-container {
+        color: $white-color;
+        margin-top: 18px;
+        & h3 {
+        font-weight: 600;
+        font-size: 19px;
+        
+        }
+
+        & p {
+            font-size: 15px;
+            opacity: 0.6;
+        }
+    }
+}
