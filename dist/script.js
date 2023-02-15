@@ -70,6 +70,9 @@ const animateTrailer = () => {
 setBannerHeroImages(selectedGame);
 setBannerHeroText(selectedGame);
 
+
+
+
 /* FOOTER SCRIPTS */
 function getUserOS() {
     let OS
@@ -106,3 +109,30 @@ function updateDownloadButton() {
 }  
 
 updateDownloadButton()
+
+
+
+/* EXCLUSIVE GAMES SECTION SCRIPTS */
+
+async function getAPI() {
+
+    const response = await fetch('https://api.brchallenges.com/api/blizzard/games');
+
+    let data = await response.json();
+    createNewCard(data);
+}
+
+getAPI();
+
+
+
+function createNewCard (games) {
+    const list = document.getElementById('gamesList')
+    
+    for (let game of games) {
+        const newCard = document.createElement('div');
+        newCard.className = 'card'
+        newCard.innerHTML ='<div class="card__image-container"> <img src="'+game.image+'" class="card__game-background"> <img src="'+game.logo+'" class="card__game-logo"> </div> <div class="card__text-container"> <h3>'+game.name+'</h3> <p>'+game.category+'</p> </div> </div> </div>'
+        list.insertBefore(newCard, list.firstChild)
+}
+}
