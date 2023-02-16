@@ -53,10 +53,17 @@
     }
 }
 
+.exclusive-games__list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 40px;
+    justify-content: space-between;
+}
+
 .card {
     &__image-container {
         position: relative;
-        width: 20%;
+        max-width: 300px;
 
         .card__game-background {
             width: 100%;

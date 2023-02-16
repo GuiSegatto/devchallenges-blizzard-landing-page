@@ -355,9 +355,16 @@
   width: 9px;
 }
 
+.exclusive-games__list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 40px;
+  justify-content: space-between;
+}
+
 .card__image-container {
   position: relative;
-  width: 20%;
+  max-width: 300px;
 }
 .card__image-container .card__game-background {
   width: 100%;

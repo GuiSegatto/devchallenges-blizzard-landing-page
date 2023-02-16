@@ -128,11 +128,11 @@ getAPI();
 
 function createNewCard (games) {
     const list = document.getElementById('gamesList')
-    
-    for (let game of games) {
+
+    for (let i = games.length - 1; i >= 0; i--) {
         const newCard = document.createElement('div');
         newCard.className = 'card'
-        newCard.innerHTML ='<div class="card__image-container"> <img src="'+game.image+'" class="card__game-background"> <img src="'+game.logo+'" class="card__game-logo"> </div> <div class="card__text-container"> <h3>'+game.name+'</h3> <p>'+game.category+'</p> </div> </div> </div>'
+        newCard.innerHTML ='<div class="card__image-container"> <img src="'+games[i].image+'" class="card__game-background"> <img src="'+games[i].logo+'" class="card__game-logo"> </div> <div class="card__text-container"> <h3>'+games[i].name+'</h3> <p>'+games[i].category+'</p> </div> </div> </div>'
         list.insertBefore(newCard, list.firstChild)
 }
 }
