@@ -1,10 +1,5 @@
 .exclusive-games{
     width: 100%;
-
-    &__container{
-        max-width: 1320px;
-        margin: 0 auto;
-    }
 }
 
 .games-header {
@@ -56,8 +51,8 @@
 .exclusive-games__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 28px;
-    justify-content: space-between;
+    gap: 28px;
+    justify-items: center;
 }
 
 .card {
@@ -131,7 +126,8 @@
 
     &.card__image-container {
         border: 1px solid $dark-grey-color;
-
+        width: 100%;
+        
         &::after {
            content: none; 
         }
