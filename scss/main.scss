@@ -41,3 +41,31 @@ body {
     }    
 }
 
+/* RULERS */
+
+.footer__container, .header__container, .exclusive-games__container{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+    .footer__container, .header__container, .exclusive-games__container {
+        max-width: 1230px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__container, .header__container, .exclusive-games__container {
+        max-width: 666px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer__container, .header__container, .exclusive-games__container {
+        max-width: 326px;
+        margin: 0 auto;
+    }
+}
+

@@ -3,10 +3,6 @@
   max-height: 736px;
   position: relative;
 }
-.header__container {
-  max-width: 1320px;
-  margin: 0 auto;
-}
 .header__background {
   -o-object-fit: cover;
      object-fit: cover;
@@ -199,8 +195,6 @@
   position: relative;
 }
 .footer__container {
-  max-width: 1320px;
-  margin: 0 auto;
   display: flex;
 }
 .footer__background {
@@ -219,7 +213,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 132px;
+  margin: 10% 0;
   max-width: 30%;
 }
 .footer-info__logo {
@@ -283,16 +277,19 @@
 .footer-images {
   position: relative;
   left: 10%;
-  max-width: 70%;
+  width: 60%;
+  overflow: hidden;
 }
 .footer-images__background {
   width: 100%;
+  position: absolute;
+  top: 10%;
 }
 .footer-images__overlay {
   width: 50%;
   position: absolute;
-  top: 45%;
-  left: 50%;
+  top: 50%;
+  left: 30%;
   animation-duration: 2s;
   animation-name: scale;
   animation-iteration-count: infinite;
@@ -310,10 +307,6 @@
 
 .exclusive-games {
   width: 100%;
-}
-.exclusive-games__container {
-  max-width: 1320px;
-  margin: 0 auto;
 }
 
 .games-header {
@@ -358,7 +351,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
-  justify-content: space-between;
+  justify-items: center;
 }
 
 .card {
@@ -419,6 +412,7 @@
 
 .last-card.card__image-container {
   border: 1px solid #212428;
+  width: 100%;
 }
 .last-card.card__image-container::after {
   content: none;
@@ -475,4 +469,29 @@ body {
 .btn--create-account {
   border: 1px solid #ffffff;
   background: transparent;
+}
+
+/* RULERS */
+.footer__container, .header__container, .exclusive-games__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .footer__container, .header__container, .exclusive-games__container {
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .footer__container, .header__container, .exclusive-games__container {
+    max-width: 666px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 375px) {
+  .footer__container, .header__container, .exclusive-games__container {
+    max-width: 326px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=main.css.map */
